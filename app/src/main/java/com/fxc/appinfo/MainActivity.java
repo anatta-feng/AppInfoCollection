@@ -1,20 +1,18 @@
 package com.fxc.appinfo;
 
-import android.app.ActivityManager;
-import android.os.Debug;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
-import java.util.List;
+import com.fxc.appinfo.file.FileUtil;
+import com.fxc.appinfo.util.AppInfoUtils;
 
 public class MainActivity extends AppCompatActivity {
 
 	TextView textView;
-	ActivityManager manager;
 
 	Handler mHandler = new Handler() {
 		@Override
@@ -55,5 +53,12 @@ public class MainActivity extends AppCompatActivity {
 				}
 			}
 		}).start();
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		FileUtil fileUtil = FileUtil.newInstance(this);
+		fileUtil.getFile();
 	}
 }

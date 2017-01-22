@@ -1,4 +1,4 @@
-package com.fxc.appinfo;
+package com.fxc.appinfo.util;
 
 import android.app.ActivityManager;
 import android.content.ComponentName;
