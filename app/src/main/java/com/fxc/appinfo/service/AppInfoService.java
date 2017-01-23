@@ -75,7 +75,6 @@ public class AppInfoService extends Service implements View.OnClickListener {
 			case R.id.bt_end:
 				FileUtil.isCheck = false;
 				isStart = false;
-				Toast.makeText(this, "记录完毕,请到 /data/data/com.fxc.appinfo/appInfo.txt 路径下取出文件", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.bt_kill:
 				stopSelf();
@@ -93,6 +92,6 @@ public class AppInfoService extends Service implements View.OnClickListener {
 	public void onDestroy() {
 		super.onDestroy();
 		mFloatView.cancel();
-		Process.killProcess(android.os.Process.myPid());
+		Process.killProcess(Process.myPid());
 	}
 }

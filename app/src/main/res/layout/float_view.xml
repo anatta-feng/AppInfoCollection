@@ -7,21 +7,29 @@
 
     <Button
         android:id="@+id/bt_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"/>
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:alpha="0.5"
+        android:text="Start"
+        android:textSize="10sp"/>
 
     <Button
         android:id="@+id/bt_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/bt_start"
-        android:text="End"/>
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/bt_start"
+        android:alpha="0.5"
+        android:layout_marginTop="5dp"
+        android:text="End"
+        android:textSize="10sp"/>
 
     <Button
         android:id="@+id/bt_kill"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/bt_end"
-        android:text="退出"/>
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/bt_end"
+        android:alpha="0.5"
+        android:text="退出"
+        android:textSize="10sp"/>
 </RelativeLayout>

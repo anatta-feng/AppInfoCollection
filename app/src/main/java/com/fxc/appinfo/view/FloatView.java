@@ -39,7 +39,7 @@ public class FloatView {
 		mParams.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 		mParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
 		mParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
-		mParams.gravity = Gravity.TOP | Gravity.RIGHT;
+		mParams.gravity = Gravity.CENTER | Gravity.RIGHT;
 
 		mManager.addView(mView, mParams);
 	}
