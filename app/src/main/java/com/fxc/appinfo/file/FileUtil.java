@@ -1,8 +1,6 @@
 package com.fxc.appinfo.file;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.util.Log;
 
 import com.fxc.appinfo.util.AppInfoUtils;
 
@@ -28,7 +26,7 @@ public class FileUtil {
 
 	public static boolean isCheck = true;
 
-	private FileUtil(@NonNull Context context) {
+	private FileUtil(Context context) {
 		mContext = context;
 	}
 
@@ -50,15 +48,14 @@ public class FileUtil {
 				utils = AppInfoUtils.newInstance(mContext);
 				File file = mContext.getFileStreamPath("appInfo.txt");
 				List<String> list = getTableTitle();
-					while (isCheck) {
-						list = addAppInfo(list);
-						Log.d("qwer", "q");
-						try {
-							Thread.sleep(2000);
-						} catch (InterruptedException e) {
-							e.printStackTrace();
-						}
+				while (isCheck) {
+					list = addAppInfo(list);
+					try {
+						Thread.sleep(2000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
 					}
+				}
 				try {
 					FileOutputStream fs = new FileOutputStream(file);
 					PrintStream p = new PrintStream(fs);

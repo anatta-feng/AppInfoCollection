@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.os.Debug;
+import android.util.Log;
 
 import java.util.List;
 
@@ -59,7 +60,9 @@ public class AppInfoUtils {
 
 	public int getForegroundPid() {
 		List<ActivityManager.RunningAppProcessInfo> list = mManager.getRunningAppProcesses();
+		Log.d("zxca", list.size() + "");
 		for (ActivityManager.RunningAppProcessInfo info : list) {
+			Log.d("zxca", "pid " + info.pid);
 			if (info.importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_VISIBLE || info.importance ==
 					ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
 				return info.pid;
